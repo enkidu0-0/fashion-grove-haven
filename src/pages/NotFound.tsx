@@ -20,7 +20,7 @@ const NotFound = () => {
       <Header />
       <main className="flex-grow flex items-center justify-center bg-white">
         <div className="text-center px-4 py-20">
-          <h1 className="text-6xl font-bold text-fg-black mb-4">404</h1>
+          <h1 className="text-7xl font-playfair font-medium text-fg-black mb-4">404</h1>
           <p className="text-xl text-fg-darkGray mb-8">
             Oops! The page you're looking for cannot be found.
           </p>
