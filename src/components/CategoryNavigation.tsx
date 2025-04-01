@@ -1,7 +1,7 @@
 
-import { TShirt, Shirt, AlertCircle, Pants, Dress, Watch } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { Shirt, AlertCircle, Watch, ShoppingBag, Glasses, ShirtIcon } from "lucide-react";
 
 interface Category {
   id: string;
@@ -14,7 +14,7 @@ const categories: Category[] = [
   {
     id: "tshirts",
     name: "T-shirts",
-    icon: <TShirt size={24} />,
+    icon: <ShirtIcon size={24} />,
     link: "/category/tshirts",
   },
   {
@@ -32,13 +32,13 @@ const categories: Category[] = [
   {
     id: "jeans",
     name: "Jeans",
-    icon: <Pants size={24} />,
+    icon: <ShoppingBag size={24} />,
     link: "/category/jeans",
   },
   {
     id: "dresses",
     name: "Dresses",
-    icon: <Dress size={24} />,
+    icon: <ShoppingBag size={24} />,
     link: "/category/dresses",
   },
   {
