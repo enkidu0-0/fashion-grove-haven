@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Header from "@/components/Header";
+import HeroSlider from "@/components/HeroSlider";
+import CategoryNavigation from "@/components/CategoryNavigation";
+import FeaturedCollections from "@/components/FeaturedCollections";
+import ProductSection from "@/components/ProductSection";
+import TrendingSection from "@/components/TrendingSection";
+import NewsletterBanner from "@/components/NewsletterBanner";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import { tshirts, hoodies } from "@/data/mockData";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow">
+        <HeroSlider />
+        <CategoryNavigation />
+        <FeaturedCollections />
+        <ProductSection title="T-Shirts" products={tshirts} category="tshirts" />
+        <TrendingSection />
+        <ProductSection title="Hoodies" products={hoodies} category="hoodies" />
+        <NewsletterBanner />
+      </main>
+      <Footer />
+      <ScrollToTop />
     </div>
   );
 };
