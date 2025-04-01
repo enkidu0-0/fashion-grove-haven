@@ -31,10 +31,10 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-2" : "bg-white py-4"
+        isScrolled ? "bg-white shadow-sm py-2" : "bg-white py-4"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="flex items-center justify-between">
           {/* Mobile Menu Button */}
           {isMobile && (
@@ -48,27 +48,28 @@ const Header = () => {
 
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-fg-black">
-              Fashion<span className="font-light">Grown</span>
+            <Link to="/" className="text-2xl font-playfair text-fg-black flex items-center">
+              <span className="font-medium">Fashion</span>
+              <span className="font-light">Grown</span>
             </Link>
           </div>
 
           {/* Navigation - Desktop */}
           {!isMobile && (
             <nav className="hidden md:flex space-x-8 ml-10">
-              <Link to="/" className="text-fg-black hover:text-fg-darkGray font-medium">
+              <Link to="/" className="text-fg-black hover:text-fg-darkGray font-medium text-sm uppercase tracking-wider py-2">
                 Home
               </Link>
-              <Link to="/shop" className="text-fg-black hover:text-fg-darkGray font-medium">
+              <Link to="/shop" className="text-fg-black hover:text-fg-darkGray font-medium text-sm uppercase tracking-wider py-2">
                 Shop
               </Link>
-              <Link to="/collections" className="text-fg-black hover:text-fg-darkGray font-medium">
+              <Link to="/collections" className="text-fg-black hover:text-fg-darkGray font-medium text-sm uppercase tracking-wider py-2">
                 Collections
               </Link>
-              <Link to="/about" className="text-fg-black hover:text-fg-darkGray font-medium">
+              <Link to="/about" className="text-fg-black hover:text-fg-darkGray font-medium text-sm uppercase tracking-wider py-2">
                 About
               </Link>
-              <Link to="/contact" className="text-fg-black hover:text-fg-darkGray font-medium">
+              <Link to="/contact" className="text-fg-black hover:text-fg-darkGray font-medium text-sm uppercase tracking-wider py-2">
                 Contact
               </Link>
             </nav>
@@ -80,26 +81,26 @@ const Header = () => {
               <input
                 type="text"
                 placeholder="Search for products..."
-                className="w-full py-2 pl-10 pr-4 border border-fg-gray rounded-md focus:outline-none focus:ring-1 focus:ring-fg-black"
+                className="w-full py-2 pl-10 pr-4 border border-fg-gray/70 rounded-md focus:outline-none focus:ring-1 focus:ring-fg-black transition-all"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-fg-darkGray" size={18} />
             </div>
           </div>
 
           {/* User Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-6">
             {!isMobile && (
               <>
-                <Link to="/account" className="text-fg-black hover:text-fg-darkGray">
-                  <User size={24} />
+                <Link to="/account" className="text-fg-black hover:text-fg-darkGray transition-colors">
+                  <User size={22} />
                 </Link>
-                <Link to="/wishlist" className="text-fg-black hover:text-fg-darkGray">
-                  <Heart size={24} />
+                <Link to="/wishlist" className="text-fg-black hover:text-fg-darkGray transition-colors">
+                  <Heart size={22} />
                 </Link>
               </>
             )}
-            <Link to="/cart" className="text-fg-black hover:text-fg-darkGray relative">
-              <ShoppingCart size={24} />
+            <Link to="/cart" className="text-fg-black hover:text-fg-darkGray relative transition-colors">
+              <ShoppingCart size={22} />
               <span className="absolute -top-1 -right-1 bg-fg-black text-fg-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                 0
               </span>
@@ -114,7 +115,7 @@ const Header = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                className="w-full py-2 pl-10 pr-4 border border-fg-gray rounded-md focus:outline-none focus:ring-1 focus:ring-fg-black"
+                className="w-full py-2 pl-10 pr-4 border border-fg-gray/70 rounded-md focus:outline-none focus:ring-1 focus:ring-fg-black transition-all"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-fg-darkGray" size={18} />
             </div>
@@ -127,45 +128,45 @@ const Header = () => {
             <nav className="flex flex-col py-4">
               <Link
                 to="/"
-                className="px-4 py-2 text-fg-black hover:bg-fg-gray"
+                className="px-4 py-2 text-fg-black hover:bg-fg-gray/10 text-sm uppercase tracking-wider"
                 onClick={toggleMenu}
               >
                 Home
               </Link>
               <Link
                 to="/shop"
-                className="px-4 py-2 text-fg-black hover:bg-fg-gray"
+                className="px-4 py-2 text-fg-black hover:bg-fg-gray/10 text-sm uppercase tracking-wider"
                 onClick={toggleMenu}
               >
                 Shop
               </Link>
               <Link
                 to="/collections"
-                className="px-4 py-2 text-fg-black hover:bg-fg-gray"
+                className="px-4 py-2 text-fg-black hover:bg-fg-gray/10 text-sm uppercase tracking-wider"
                 onClick={toggleMenu}
               >
                 Collections
               </Link>
               <Link
                 to="/about"
-                className="px-4 py-2 text-fg-black hover:bg-fg-gray"
+                className="px-4 py-2 text-fg-black hover:bg-fg-gray/10 text-sm uppercase tracking-wider"
                 onClick={toggleMenu}
               >
                 About
               </Link>
               <Link
                 to="/contact"
-                className="px-4 py-2 text-fg-black hover:bg-fg-gray"
+                className="px-4 py-2 text-fg-black hover:bg-fg-gray/10 text-sm uppercase tracking-wider"
                 onClick={toggleMenu}
               >
                 Contact
               </Link>
-              <div className="flex px-4 py-2 space-x-4">
+              <div className="flex px-4 py-2 space-x-6">
                 <Link to="/account" className="text-fg-black" onClick={toggleMenu}>
-                  <User size={24} />
+                  <User size={22} />
                 </Link>
                 <Link to="/wishlist" className="text-fg-black" onClick={toggleMenu}>
-                  <Heart size={24} />
+                  <Heart size={22} />
                 </Link>
               </div>
             </nav>

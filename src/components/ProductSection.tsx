@@ -20,19 +20,19 @@ interface ProductSectionProps {
 
 const ProductSection = ({ title, products, category }: ProductSectionProps) => {
   return (
-    <section className="py-12 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-8">
+    <section className="py-16 bg-white">
+      <div className="container mx-auto">
+        <div className="flex justify-between items-center mb-10">
           <h2 className="section-title">{title}</h2>
           <Link
             to={`/category/${category}`}
-            className="text-fg-black font-medium hover:underline"
+            className="text-fg-black font-medium text-sm uppercase tracking-wider hover:underline"
           >
             View All
           </Link>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6 lg:gap-8">
           {products.map((product) => (
             <ProductCard
               key={product.id}

@@ -43,41 +43,41 @@ const ProductCard = ({
   };
 
   return (
-    <Link to={`/product/${id}`} className="product-card">
+    <Link to={`/product/${id}`} className="product-card group">
       <div className="product-image-container">
-        <img src={image} alt={name} className="product-image" />
+        <img src={image} alt={name} className="product-image group-hover:scale-105" />
         
         {/* Badges */}
-        <div className="absolute top-2 left-2 flex flex-col gap-1">
+        <div className="absolute top-3 left-3 flex flex-col gap-1">
           {isNew && (
-            <span className="bg-fg-black text-fg-white px-2 py-1 text-xs font-semibold">
+            <span className="bg-fg-black text-fg-white px-2 py-1 text-xs font-medium tracking-wider">
               NEW
             </span>
           )}
           {discount && (
-            <span className="bg-fg-black text-fg-white px-2 py-1 text-xs font-semibold">
+            <span className="bg-fg-black text-fg-white px-2 py-1 text-xs font-medium tracking-wider">
               -{discount}%
             </span>
           )}
         </div>
         
         {/* Overlay with actions */}
-        <div className="product-overlay">
+        <div className="product-overlay group-hover:opacity-100 group-hover:bg-opacity-20">
           <div className="flex space-x-2">
             <button
               onClick={handleAddToCart}
-              className="product-action-button flex items-center"
+              className="product-action-button group-hover:translate-y-0 flex items-center"
             >
               <ShoppingCart size={16} className="mr-1" />
               Add to Cart
             </button>
             <button
               onClick={handleAddToWishlist}
-              className="bg-fg-white text-fg-black p-2 rounded transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0"
+              className="bg-fg-white text-fg-black p-2 rounded-md transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0"
             >
               <Heart size={16} />
             </button>
-            <button className="bg-fg-white text-fg-black p-2 rounded transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0">
+            <button className="bg-fg-white text-fg-black p-2 rounded-md transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0">
               <Eye size={16} />
             </button>
           </div>
@@ -86,7 +86,7 @@ const ProductCard = ({
       
       {/* Product details */}
       <div className="p-4">
-        <h3 className="text-fg-black font-medium text-base mb-1 truncate">{name}</h3>
+        <h3 className="text-fg-black font-medium text-sm mb-1 truncate">{name}</h3>
         <div className="flex items-center">
           <span className="text-fg-black font-semibold">${price.toFixed(2)}</span>
           {originalPrice && (

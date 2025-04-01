@@ -58,7 +58,7 @@ const HeroSlider = () => {
   }, [nextSlide]);
 
   return (
-    <div className="relative h-[60vh] md:h-[80vh] overflow-hidden mt-16">
+    <div className="relative h-[70vh] md:h-[80vh] overflow-hidden mt-16">
       <div className="relative h-full">
         {slides.map((slide, index) => (
           <div
@@ -67,22 +67,22 @@ const HeroSlider = () => {
               index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>
             <img
               src={slide.image}
               alt={slide.title}
               className="hero-image filter grayscale"
             />
             <div className="hero-content z-20 text-center">
-              <h1 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4 animate-fade-in">
+              <h1 className="text-3xl md:text-5xl font-playfair mb-3 md:mb-4 animate-fade-in">
                 {slide.title}
               </h1>
-              <p className="text-lg md:text-xl mb-6 md:mb-8 max-w-lg mx-auto animate-fade-in">
+              <p className="text-lg md:text-xl mb-8 md:mb-10 max-w-lg mx-auto animate-fade-in opacity-90 font-light">
                 {slide.subtitle}
               </p>
               <Link
                 to={slide.link}
-                className="bg-fg-white text-fg-black px-6 py-3 rounded-sm font-medium hover:bg-fg-black hover:text-fg-white transition-colors duration-300 animate-fade-in"
+                className="bg-fg-white text-fg-black px-8 py-3 rounded-none font-medium hover:bg-fg-black hover:text-fg-white transition-colors duration-300 animate-fade-in tracking-wider text-sm uppercase"
               >
                 {slide.cta}
               </Link>
@@ -94,13 +94,15 @@ const HeroSlider = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full transition-colors duration-300"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/20 hover:bg-black/60 text-white p-2 rounded-full transition-colors duration-300"
+        aria-label="Previous slide"
       >
         <ChevronLeft size={24} />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full transition-colors duration-300"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/20 hover:bg-black/60 text-white p-2 rounded-full transition-colors duration-300"
+        aria-label="Next slide"
       >
         <ChevronRight size={24} />
       </button>
@@ -112,8 +114,9 @@ const HeroSlider = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide ? "w-4 bg-fg-white" : "bg-fg-white/50"
+              index === currentSlide ? "w-6 bg-fg-white" : "bg-fg-white/50"
             }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
