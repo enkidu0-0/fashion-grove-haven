@@ -83,8 +83,8 @@ const Contact = () => {
                 <Phone className="h-10 w-10 text-fg-black mb-4" />
                 <h3 className="font-playfair text-xl mb-2">Call Us</h3>
                 <p className="text-fg-darkGray/90 mb-2">Customer support</p>
-                <a href="tel:+1234567890" className="text-fg-black hover:underline">
-                  +1 (234) 567-890
+                <a href="tel:+919876543210" className="text-fg-black hover:underline">
+                  +91 98765 43210
                 </a>
               </div>
               
@@ -93,8 +93,8 @@ const Contact = () => {
                 <h3 className="font-playfair text-xl mb-2">Visit Us</h3>
                 <p className="text-fg-darkGray/90 mb-2">Our flagship store</p>
                 <address className="text-fg-black not-italic">
-                  123 Fashion Street<br />
-                  New York, NY 10001
+                  42 Park Street<br />
+                  Kolkata, West Bengal 700016
                 </address>
               </div>
               
@@ -212,12 +212,12 @@ const Contact = () => {
               <div>
                 <h2 className="text-3xl font-playfair mb-6">Our Location</h2>
                 <p className="text-fg-darkGray/90 mb-8">
-                  Visit our flagship store in the heart of the city's fashion district.
+                  Visit our flagship store in the heart of Kolkata's fashion district.
                 </p>
                 
                 <div className="relative aspect-square md:aspect-[4/3] bg-fg-gray/20 rounded-lg overflow-hidden mb-6">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095989735!2d-74.0059413!3d40.7127837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a21fb011c85%3A0x37513b7f1821408b!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1655437322294!5m2!1sen!2s" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.21260474823!2d88.34824937583055!3d22.562308879551296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02773b5e387231%3A0xccc6123fefc9a2ed!2sPark%20Street%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1681234567890!5m2!1sen!2sin" 
                     className="absolute inset-0 w-full h-full border-0"
                     allowFullScreen={true}
                     loading="lazy"
@@ -233,14 +233,14 @@ const Contact = () => {
                       <MapPin className="h-5 w-5 text-fg-black mr-2 mt-0.5" />
                       <div>
                         <p className="font-medium">Address:</p>
-                        <p className="text-fg-darkGray/90">123 Fashion Street, New York, NY 10001</p>
+                        <p className="text-fg-darkGray/90">42 Park Street, Kolkata, West Bengal 700016</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <Phone className="h-5 w-5 text-fg-black mr-2 mt-0.5" />
                       <div>
                         <p className="font-medium">Phone:</p>
-                        <p className="text-fg-darkGray/90">+1 (234) 567-890</p>
+                        <p className="text-fg-darkGray/90">+91 98765 43210</p>
                       </div>
                     </li>
                     <li className="flex items-start">
@@ -269,8 +269,8 @@ const Contact = () => {
               <div>
                 <h3 className="font-playfair text-xl mb-3">How long does shipping take?</h3>
                 <p className="text-fg-darkGray/90">
-                  Standard shipping typically takes 3-5 business days within the continental US. 
-                  International shipping can take 7-14 business days depending on the destination.
+                  Standard shipping typically takes 2-4 business days within major Indian cities. 
+                  Remote areas may take 4-7 business days for delivery.
                 </p>
               </div>
               
@@ -278,7 +278,7 @@ const Contact = () => {
                 <h3 className="font-playfair text-xl mb-3">What is your return policy?</h3>
                 <p className="text-fg-darkGray/90">
                   We offer a 30-day return policy for unworn items in their original packaging. 
-                  Returns are free for customers in the United States.
+                  Returns are free for customers in metro cities of India.
                 </p>
               </div>
               
@@ -293,7 +293,7 @@ const Contact = () => {
               <div>
                 <h3 className="font-playfair text-xl mb-3">How can I track my order?</h3>
                 <p className="text-fg-darkGray/90">
-                  Once your order ships, you'll receive a confirmation email with tracking information. 
+                  Once your order ships, you'll receive a confirmation SMS and email with tracking information. 
                   You can also track your order through your account on our website.
                 </p>
               </div>
@@ -301,15 +301,15 @@ const Contact = () => {
               <div>
                 <h3 className="font-playfair text-xl mb-3">Are your products sustainable?</h3>
                 <p className="text-fg-darkGray/90">
-                  Yes, sustainability is core to our mission. We use organic and recycled materials 
-                  whenever possible and continually work to reduce our environmental footprint.
+                  Yes, sustainability is core to our mission. We use organic cotton sourced from Indian farmers
+                  and continually work to reduce our environmental footprint.
                 </p>
               </div>
               
               <div>
                 <h3 className="font-playfair text-xl mb-3">Do you offer gift cards?</h3>
                 <p className="text-fg-darkGray/90">
-                  Yes, we offer digital and physical gift cards in various denominations. 
+                  Yes, we offer digital and physical gift cards in various denominations from ₹500 to ₹10,000. 
                   They're perfect for when you want to give the gift of choice.
                 </p>
               </div>

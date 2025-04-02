@@ -94,12 +94,12 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={20} className="mr-2 mt-1 flex-shrink-0" />
-                <span className="text-fg-gray">123 Fashion Street, New York, NY 10001</span>
+                <span className="text-fg-gray">42 Park Street, Kolkata, West Bengal 700016</span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="mr-2 flex-shrink-0" />
-                <a href="tel:+12125551234" className="text-fg-gray hover:text-fg-white transition-colors">
-                  (212) 555-1234
+                <a href="tel:+919876543210" className="text-fg-gray hover:text-fg-white transition-colors">
+                  +91 98765 43210
                 </a>
               </li>
               <li className="flex items-center">
@@ -140,7 +140,7 @@ const Footer = () => {
             <div className="flex space-x-2">
               <div className="bg-fg-white text-fg-black text-xs px-2 py-1 rounded">Visa</div>
               <div className="bg-fg-white text-fg-black text-xs px-2 py-1 rounded">Mastercard</div>
-              <div className="bg-fg-white text-fg-black text-xs px-2 py-1 rounded">PayPal</div>
+              <div className="bg-fg-white text-fg-black text-xs px-2 py-1 rounded">UPI</div>
             </div>
           </div>
         </div>

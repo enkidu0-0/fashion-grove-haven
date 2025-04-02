@@ -88,10 +88,10 @@ const ProductCard = ({
       <div className="p-4">
         <h3 className="text-fg-black font-medium text-sm mb-1 truncate">{name}</h3>
         <div className="flex items-center">
-          <span className="text-fg-black font-semibold">${price.toFixed(2)}</span>
+          <span className="text-fg-black font-semibold">₹{price.toFixed(0)}</span>
           {originalPrice && (
             <span className="text-fg-darkGray line-through text-sm ml-2">
-              ${originalPrice.toFixed(2)}
+              ₹{originalPrice.toFixed(0)}
             </span>
           )}
         </div>

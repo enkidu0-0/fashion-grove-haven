@@ -92,8 +92,8 @@ const Shop = () => {
   // Filter products based on selected filters
   const filteredProducts = allProducts.filter((product) => {
     const matchesPrice = 
-      product.price >= priceRange[0] * 10 && 
-      product.price <= priceRange[1] * 10;
+      product.price >= priceRange[0] * 30 && 
+      product.price <= priceRange[1] * 30;
     
     const matchesCategory = 
       selectedCategories.length === 0 || 
@@ -188,8 +188,8 @@ const Shop = () => {
                     className="mb-2"
                   />
                   <div className="flex justify-between text-sm text-fg-darkGray/70">
-                    <span>${priceRange[0] * 10}</span>
-                    <span>${priceRange[1] * 10}</span>
+                    <span>₹{priceRange[0] * 30}</span>
+                    <span>₹{priceRange[1] * 30}</span>
                   </div>
                 </div>
                 
